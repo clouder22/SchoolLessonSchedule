@@ -20,12 +20,12 @@ const allLessons = [
 
 function onload(){
     
-    lessons[0] = localStorage.getItem("firstP").split(",")
-    lessons[1] = localStorage.getItem("secondP").split(",")
-    lessons[2] = localStorage.getItem("thirdP").split(",")
-    lessons[3] = localStorage.getItem("fourthP").split(",")
-    lessons[4] = localStorage.getItem("fifthP").split(",")
-    lessons[5] = localStorage.getItem("sixthP").split(",")
+    lessons[0] = localStorage.getItem("monday").split(",")
+    lessons[1] = localStorage.getItem("tuesday").split(",")
+    lessons[2] = localStorage.getItem("wednesday").split(",")
+    lessons[3] = localStorage.getItem("thursday").split(",")
+    lessons[4] = localStorage.getItem("friday").split(",")
+    lessons[5] = localStorage.getItem("saturday").split(",")
     
     mapTables()
 }
