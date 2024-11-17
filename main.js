@@ -23,6 +23,9 @@ function onload(){
 }
 
 function mapTables(){
+    
+    localStorage.setItem("aaa","ssss")
+
     const monday = document.getElementsByClassName("monday")
     const tuesday = document.getElementsByClassName("tuesday")
     const wednesday = document.getElementsByClassName("wednesday")
@@ -54,5 +57,4 @@ function getLessons(day,time){
 function setLessons(day,time,lesson){
     lessons[day][time] = lesson
     mapTables()
-    window.localStorage.setItem("aaa","ssss")
 }
