@@ -1,4 +1,4 @@
-let lessons = [[1,2,3,4,5,6],[11,12,13,14,15,16],[21,22,23,24,25,26],[31,32,33,34,35,36],[41,42,43,44,45,46],[51,52,53,54,55,56]];
+let lessons = [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]];
 
 const allLessons = [
     "現代の国語",//0
@@ -19,17 +19,18 @@ const allLessons = [
 ]
 
 function onload(){
+    
+    lessons[0] = localStorage.getItem("firstP").split(",")
+    lessons[1] = localStorage.getItem("secondP").split(",")
+    lessons[2] = localStorage.getItem("thirdP").split(",")
+    lessons[3] = localStorage.getItem("fourthP").split(",")
+    lessons[4] = localStorage.getItem("fifthP").split(",")
+    lessons[5] = localStorage.getItem("sixthP").split(",")
+    
     mapTables()
 }
 
 function mapTables(){
-
-    localStorage.setItem("firstP",lessons[0])
-    localStorage.setItem("secondP",lessons[1])
-    localStorage.setItem("thirdP",lessons[2])
-    localStorage.setItem("fourthP",lessons[3])
-    localStorage.setItem("fifthP",lessons[4])
-    localStorage.setItem("sixthP",lessons[5])
 
     const monday = document.getElementsByClassName("monday")
     const tuesday = document.getElementsByClassName("tuesday")
@@ -61,5 +62,13 @@ function getLessons(day,time){
 
 function setLessons(day,time,lesson){
     lessons[day][time] = lesson
+
+    localStorage.setItem("firstP",lessons[0])
+    localStorage.setItem("secondP",lessons[1])
+    localStorage.setItem("thirdP",lessons[2])
+    localStorage.setItem("fourthP",lessons[3])
+    localStorage.setItem("fifthP",lessons[4])
+    localStorage.setItem("sixthP",lessons[5])
+
     mapTables()
 }
