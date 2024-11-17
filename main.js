@@ -23,8 +23,13 @@ function onload(){
 }
 
 function mapTables(){
-    
-    localStorage.setItem("aaa","ssss")
+
+    localStorage.setItem("firstP",lessons[0])
+    localStorage.setItem("secondP",lessons[1])
+    localStorage.setItem("thirdP",lessons[2])
+    localStorage.setItem("fourthP",lessons[3])
+    localStorage.setItem("fifthP",lessons[4])
+    localStorage.setItem("sixthP",lessons[5])
 
     const monday = document.getElementsByClassName("monday")
     const tuesday = document.getElementsByClassName("tuesday")
