@@ -63,12 +63,12 @@ function getLessons(day,time){
 function setLessons(day,time,lesson){
     lessons[day][time] = lesson
 
-    localStorage.setItem("firstP",lessons[0])
-    localStorage.setItem("secondP",lessons[1])
-    localStorage.setItem("thirdP",lessons[2])
-    localStorage.setItem("fourthP",lessons[3])
-    localStorage.setItem("fifthP",lessons[4])
-    localStorage.setItem("sixthP",lessons[5])
+    localStorage.setItem("monday",lessons[0])
+    localStorage.setItem("tuesday",lessons[1])
+    localStorage.setItem("wednesday",lessons[2])
+    localStorage.setItem("thursday",lessons[3])
+    localStorage.setItem("friday",lessons[4])
+    localStorage.setItem("saturday",lessons[5])
 
     mapTables()
 }
