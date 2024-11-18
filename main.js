@@ -74,9 +74,22 @@ function setLessons(day,time,lesson){
     mapTables()
 }
 
+function registerSchedule(){
+    const day = parseInt(document.getElementById("selectionDay").value)
+    const time = parseInt(document.getElementById("selectionTime").value)
+    const lesson = parseInt(document.getElementById("selectionLesson").value)
 
-function changeScheduleWithGui(){
-    const day = parseInt(prompt("曜日を指定してください(月:0火:1水:2木:3金:4土:5"))
-    const time = parseInt(prompt("何時間目ですか")) - 1
-    setLessons(day,time,5)
+    setLessons(day,time,lesson)
+
+    document.getElementById("selectionTime").value = document.getElementById("selectionTime").value + 1;
+
+    if(document.getElementById("selectionTime").value == 6){
+        document.getElementById("selectionTime").value = 0
+        document.getElementById("selectionDay").value + 1
+        if(document.getElementById("selectionDay").value == 6){
+            document.getElementById("selectionDay").value = 0
+            document.getElementById("selectionTime").value = 0
+        }
+    }
+
 }
