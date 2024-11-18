@@ -33,7 +33,7 @@ function onload(){
         const option = document.createElement('option');
         option.value = allLessons.indexOf(elm)
 
-        option.appendChild(document.createTextNode(option.value))
+        option.appendChild(document.createTextNode(allLessons[option.value]))
         document.getElementById("selectionLesson").appendChild(option)
     })
     
