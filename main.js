@@ -32,6 +32,8 @@ function onload(){
     allLessons.forEach(elm => {
         const option = document.createElement('option');
         option.value = allLessons.indexOf(elm)
+
+        option.appendChild(document.createTextNode(option.value))
         document.getElementById("selectionLesson").appendChild(option)
     })
     
