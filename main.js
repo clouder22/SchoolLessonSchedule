@@ -81,15 +81,12 @@ function registerSchedule(){
 
     setLessons(day,time,lesson)
 
-    document.getElementById("selectionTime").value = String(parseInt(document.getElementById("selectionTime").value) + 1);
-
-    if(parseInt(document.getElementById("selectionTime").value) == 6){
+    if(document.getElementById("selectionTime").value == "5"){
         document.getElementById("selectionTime").value = "0"
-        document.getElementById("selectionDay").value = String(parseInt(document.getElementById("selectionDay").value) + 1)
-        if(document.getElementById("selectionDay").value == 6){
-            document.getElementById("selectionDay").value = "0"
-            document.getElementById("selectionTime").value = "0"
-        }
+        document.getElementById("selectionDay").value = String(parseInt(document.getElementById("selectionDay").value) + 1);
+    }else{
+        document.getElementById("selectionTime").value = String(parseInt(document.getElementById("selectionTime").value) + 1);
     }
 
+    //5の次は6じゃない
 }
