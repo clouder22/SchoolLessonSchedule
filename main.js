@@ -1,7 +1,7 @@
 let lessons = [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]];
 
 const allLessons = [
-    "NULL",//0
+    "空きコマ",//0
     "現代の国語",//1
     "言語文化",//2
     "数学Ⅰ",//3
@@ -27,6 +27,13 @@ function onload(){
     lessons[3] = localStorage.getItem("thursday").split(",")
     lessons[4] = localStorage.getItem("friday").split(",")
     lessons[5] = localStorage.getItem("saturday").split(",")
+
+
+    allLessons.forEach(elm => {
+        const option = document.createElement('option');
+        option.value = allLessons.indexOf(elm)
+        document.getElementById("selectionLesson").appendChild(option)
+    })
     
     mapTables()
 }
@@ -88,5 +95,4 @@ function registerSchedule(){
         document.getElementById("selectionTime").value = String(parseInt(document.getElementById("selectionTime").value) + 1);
     }
 
-    //5の次は6じゃない
 }
