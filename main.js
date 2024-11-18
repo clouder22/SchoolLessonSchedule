@@ -73,3 +73,10 @@ function setLessons(day,time,lesson){
 
     mapTables()
 }
+
+
+function changeScheduleWithGui(){
+    const day = parsrInt(prompt("曜日を指定してください(月:0火:1水:2木:3金:4土:5"))
+    const time = paraeInt(prompt("何時間目ですか")) - 1
+    setLessons(day,time,5)
+}
